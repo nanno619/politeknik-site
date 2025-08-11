@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Pemantauan PDP - Sistem Pengurusan Politeknik</title>
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css" rel="stylesheet"/>
+    <link href="/assets/css/modern-style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="page">
+        <!-- Navbar -->
+        <header class="navbar navbar-expand-md d-print-none" data-bs-theme="dark">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9,22 9,12 15,12 15,22"></polyline></svg>
+                        Sistem Politeknik
+                    </a>
+                </h1>
+            </div>
+        </header>
+        
+        <div class="page-wrapper">
+            <!-- Page header -->
+            <div class="page-header d-print-none">
+                <div class="container-xl">
+                    <div class="row g-2 align-items-center">
+                        <div class="col">
+                            <div class="page-pretitle">Modul</div>
+                            <h2 class="page-title">Pemantauan Prestasi Diri Pelajar (PDP)</h2>
+                        </div>
+                        <div class="col-auto ms-auto d-print-none">
+                            <div class="btn-list">
+                                <a href="#" class="btn btn-outline-secondary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-bulk-update">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 9l5 -5l5 5" /><path d="M12 4l0 12" /></svg>
+                                    Import Data
+                                </a>
+                                <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-new-entry">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+                                    Tambah Rekod
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Page body -->
+            <div class="page-body">
+                <div class="container-xl">
+                    <!-- Statistics -->
+                    <div class="row row-cards mb-4">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="stats-card card card-sm">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <span class="bg-primary text-white avatar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+                                            </span>
+                                        </div>
+                                        <div class="col">
+                                            <div class="font-weight-medium">Jumlah Pelajar</div>
+                                            <div class="text-muted">1,847 Rekod</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="stats-card card card-sm">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <span class="bg-success text-white avatar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 3v18h18" /><path d="M20 18v3" /><path d="M16 16v5" /><path d="M12 13v8" /><path d="M8 16v5" /><path d="M3 11c6 0 5 -5 9 -5s3 5 9 5" /></svg>
+                                            </span>
+                                        </div>
+                                        <div class="col">
+                                            <div class="font-weight-medium">Prestasi Meningkat</div>
+                                            <div class="text-muted">756 Pelajar</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="stats-card card card-sm">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <span class="bg-warning text-white avatar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 9v4" /><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /><path d="M12 16h.01" /></svg>
+                                            </span>
+                                        </div>
+                                        <div class="col">
+                                            <div class="font-weight-medium">Perlu Perhatian</div>
+                                            <div class="text-muted">234 Pelajar</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="stats-card card card-sm">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <span class="bg-info text-white avatar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 7v5l3 3" /></svg>
+                                            </span>
+                                        </div>
+                                        <div class="col">
+                                            <div class="font-weight-medium">Purata Skor</div>
+                                            <div class="text-muted">74.2 / 100</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Navigation -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a href="#tab-overview" class="nav-link active" data-bs-toggle="tab" role="tab">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 3v18h18" /><path d="M20 18v3" /><path d="M16 16v5" /><path d="M12 13v8" /><path d="M8 16v5" /><path d="M3 11c6 0 5 -5 9 -5s3 5 9 5" /></svg>
+                                                Overview PDP
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a href="#tab-students" class="nav-link" data-bs-toggle="tab" role="tab">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+                                                Data Pelajar
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a href="#tab-trends" class="nav-link" data-bs-toggle="tab" role="tab">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 7v5l3 3" /></svg>
+                                                Trend & Analisis
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a href="#tab-interventions" class="nav-link" data-bs-toggle="tab" role="tab">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" /><path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M17 10h2a2 2 0 0 1 2 2v1" /><path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M3 13v-1a2 2 0 0 1 2 -2h2" /></svg>
+                                                Intervensi
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <!-- Overview Tab -->
+                                        <div class="tab-pane fade show active" id="tab-overview" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">Taburan Prestasi PDP</h3>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="progress-list">
+                                                                <div class="progress-list-item">
+                                                                    <div class="progress-list-item-name">Cemerlang (80-100)</div>
+                                                                    <div class="progress-list-item-progress">
+                                                                        <div class="progress progress-sm">
+                                                                            <div class="progress-bar bg-success" style="width: 32%" role="progressbar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress-list-item-label">591 pelajar</div>
+                                                                </div>
+                                                                <div class="progress-list-item">
+                                                                    <div class="progress-list-item-name">Baik (70-79)</div>
+                                                                    <div class="progress-list-item-progress">
+                                                                        <div class="progress progress-sm">
+                                                                            <div class="progress-bar bg-blue" style="width: 41%" role="progressbar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress-list-item-label">757 pelajar</div>
+                                                                </div>
+                                                                <div class="progress-list-item">
+                                                                    <div class="progress-list-item-name">Sederhana (60-69)</div>
+                                                                    <div class="progress-list-item-progress">
+                                                                        <div class="progress progress-sm">
+                                                                            <div class="progress-bar bg-yellow" style="width: 15%" role="progressbar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress-list-item-label">277 pelajar</div>
+                                                                </div>
+                                                                <div class="progress-list-item">
+                                                                    <div class="progress-list-item-name">Perlu Perhatian (<60)</div>
+                                                                    <div class="progress-list-item-progress">
+                                                                        <div class="progress progress-sm">
+                                                                            <div class="progress-bar bg-red" style="width: 12%" role="progressbar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress-list-item-label">222 pelajar</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-lg-4">
+                                                    <div class="row">
+                                                        <div class="col-12 mb-3">
+                                                            <div class="card">
+                                                                <div class="card-body text-center">
+                                                                    <div class="h1 text-primary">73%</div>
+                                                                    <div class="h3">Kadar Kejayaan</div>
+                                                                    <div class="text-muted">Pelajar dengan skor ≥70</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="card">
+                                                                <div class="card-body text-center">
+                                                                    <div class="h1 text-success">+5.2%</div>
+                                                                    <div class="h3">Peningkatan</div>
+                                                                    <div class="text-muted">Berbanding semester lalu</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row mt-4">
+                                                <div class="col-12">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">Pelajar Perlu Perhatian Segera</h3>
+                                                        </div>
+                                                        <div class="list-group list-group-flush">
+                                                            <div class="list-group-item">
+                                                                <div class="row align-items-center">
+                                                                    <div class="col-auto">
+                                                                        <span class="status-dot status-dot-animated bg-red"></span>
+                                                                    </div>
+                                                                    <div class="col text-truncate">
+                                                                        <strong>Ahmad Zain (2023001245)</strong> - Skor PDP: 45
+                                                                        <div class="text-muted">Program: Diploma Kejuruteraan • Semester 2</div>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <a href="#" class="btn btn-warning btn-sm">Intervensi</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="list-group-item">
+                                                                <div class="row align-items-center">
+                                                                    <div class="col-auto">
+                                                                        <span class="status-dot status-dot-animated bg-red"></span>
+                                                                    </div>
+                                                                    <div class="col text-truncate">
+                                                                        <strong>Siti Nurhaliza (2023001267)</strong> - Skor PDP: 52
+                                                                        <div class="text-muted">Program: Diploma Teknologi Maklumat • Semester 3</div>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <a href="#" class="btn btn-warning btn-sm">Intervensi</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Students Tab -->
+                                        <div class="tab-pane fade" id="tab-students" role="tabpanel">
+                                            <div class="d-flex mb-3">
+                                                <div class="text-muted">
+                                                    Filter:
+                                                </div>
+                                                <div class="ms-auto">
+                                                    <div class="btn-group">
+                                                        <select class="form-select form-select-sm">
+                                                            <option>Semua Program</option>
+                                                            <option>Diploma Kejuruteraan Mekanikal</option>
+                                                            <option>Diploma Teknologi Maklumat</option>
+                                                            <option>Diploma Kejuruteraan Elektrikal</option>
+                                                        </select>
+                                                        <select class="form-select form-select-sm">
+                                                            <option>Semua Semester</option>
+                                                            <option>Semester 1</option>
+                                                            <option>Semester 2</option>
+                                                            <option>Semester 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive">
+                                                <table class="table table-vcenter">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>No. Pelajar</th>
+                                                            <th>Nama</th>
+                                                            <th>Program</th>
+                                                            <th>Semester</th>
+                                                            <th>Skor PDP</th>
+                                                            <th>Trend</th>
+                                                            <th>Status</th>
+                                                            <th class="w-1">Tindakan</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-muted">2023001234</td>
+                                                            <td>
+                                                                <div class="d-flex py-1 align-items-center">
+                                                                    <span class="avatar me-2">AH</span>
+                                                                    <div class="flex-fill">
+                                                                        <div class="font-weight-medium">Ahmad Hasan</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>Diploma Kejuruteraan Mekanikal</td>
+                                                            <td>Semester 3</td>
+                                                            <td><span class="badge bg-success">85</span></td>
+                                                            <td>
+                                                                <span class="text-success">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-sm" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
+                                                                    +12
+                                                                </span>
+                                                            </td>
+                                                            <td><span class="status status-green">Cemerlang</span></td>
+                                                            <td>
+                                                                <div class="dropdown">
+                                                                    <button class="btn dropdown-toggle align-text-top" data-bs-toggle="dropdown">Tindakan</button>
+                                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                                        <a class="dropdown-item" href="#">Lihat Detail</a>
+                                                                        <a class="dropdown-item" href="#">Sejarah PDP</a>
+                                                                        <a class="dropdown-item" href="#">Export Data</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">2023001235</td>
+                                                            <td>
+                                                                <div class="d-flex py-1 align-items-center">
+                                                                    <span class="avatar me-2">SF</span>
+                                                                    <div class="flex-fill">
+                                                                        <div class="font-weight-medium">Siti Fatimah</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>Diploma Teknologi Maklumat</td>
+                                                            <td>Semester 4</td>
+                                                            <td><span class="badge bg-blue">78</span></td>
+                                                            <td>
+                                                                <span class="text-success">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-sm" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
+                                                                    +8
+                                                                </span>
+                                                            </td>
+                                                            <td><span class="status status-blue">Baik</span></td>
+                                                            <td>
+                                                                <div class="dropdown">
+                                                                    <button class="btn dropdown-toggle align-text-top" data-bs-toggle="dropdown">Tindakan</button>
+                                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                                        <a class="dropdown-item" href="#">Lihat Detail</a>
+                                                                        <a class="dropdown-item" href="#">Sejarah PDP</a>
+                                                                        <a class="dropdown-item" href="#">Export Data</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">2023001236</td>
+                                                            <td>
+                                                                <div class="d-flex py-1 align-items-center">
+                                                                    <span class="avatar me-2">MR</span>
+                                                                    <div class="flex-fill">
+                                                                        <div class="font-weight-medium">Muhammad Rahman</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>Diploma Kejuruteraan Elektrikal</td>
+                                                            <td>Semester 2</td>
+                                                            <td><span class="badge bg-red">54</span></td>
+                                                            <td>
+                                                                <span class="text-danger">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-sm" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7l6 6l4 -4l8 8" /><path d="M21 10l-7 0l0 7" /></svg>
+                                                                    -15
+                                                                </span>
+                                                            </td>
+                                                            <td><span class="status status-red">Perhatian</span></td>
+                                                            <td>
+                                                                <div class="dropdown">
+                                                                    <button class="btn dropdown-toggle align-text-top" data-bs-toggle="dropdown">Tindakan</button>
+                                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                                        <a class="dropdown-item" href="#">Lihat Detail</a>
+                                                                        <a class="dropdown-item" href="#">Sejarah PDP</a>
+                                                                        <a class="dropdown-item text-warning" href="#">Rancang Intervensi</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Trends Tab -->
+                                        <div class="tab-pane fade" id="tab-trends" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">Trend Prestasi Mengikut Program</h3>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table table-sm">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Program</th>
+                                                                            <th>Purata Skor</th>
+                                                                            <th>Perubahan</th>
+                                                                            <th>Cemerlang</th>
+                                                                            <th>Perhatian</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Diploma Kejuruteraan Mekanikal</td>
+                                                                            <td>76.8</td>
+                                                                            <td><span class="text-success">+3.2</span></td>
+                                                                            <td><span class="badge bg-success">45%</span></td>
+                                                                            <td><span class="badge bg-red">8%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Diploma Teknologi Maklumat</td>
+                                                                            <td>78.5</td>
+                                                                            <td><span class="text-success">+5.1</span></td>
+                                                                            <td><span class="badge bg-success">52%</span></td>
+                                                                            <td><span class="badge bg-red">6%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Diploma Kejuruteraan Elektrikal</td>
+                                                                            <td>72.3</td>
+                                                                            <td><span class="text-warning">+1.8</span></td>
+                                                                            <td><span class="badge bg-success">38%</span></td>
+                                                                            <td><span class="badge bg-red">12%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Diploma Kejuruteraan Awam</td>
+                                                                            <td>74.9</td>
+                                                                            <td><span class="text-success">+4.3</span></td>
+                                                                            <td><span class="badge bg-success">42%</span></td>
+                                                                            <td><span class="badge bg-red">9%</span></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-lg-4">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">Faktor Prestasi</h3>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="progress-list">
+                                                                <div class="progress-list-item">
+                                                                    <div class="progress-list-item-name">Kehadiran</div>
+                                                                    <div class="progress-list-item-progress">
+                                                                        <div class="progress progress-sm">
+                                                                            <div class="progress-bar bg-primary" style="width: 85%" role="progressbar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress-list-item-label">85%</div>
+                                                                </div>
+                                                                <div class="progress-list-item">
+                                                                    <div class="progress-list-item-name">Tugasan</div>
+                                                                    <div class="progress-list-item-progress">
+                                                                        <div class="progress progress-sm">
+                                                                            <div class="progress-bar bg-success" style="width: 78%" role="progressbar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress-list-item-label">78%</div>
+                                                                </div>
+                                                                <div class="progress-list-item">
+                                                                    <div class="progress-list-item-name">Peperiksaan</div>
+                                                                    <div class="progress-list-item-progress">
+                                                                        <div class="progress progress-sm">
+                                                                            <div class="progress-bar bg-blue" style="width: 72%" role="progressbar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress-list-item-label">72%</div>
+                                                                </div>
+                                                                <div class="progress-list-item">
+                                                                    <div class="progress-list-item-name">Aktiviti</div>
+                                                                    <div class="progress-list-item-progress">
+                                                                        <div class="progress progress-sm">
+                                                                            <div class="progress-bar bg-yellow" style="width: 65%" role="progressbar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress-list-item-label">65%</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Interventions Tab -->
+                                        <div class="tab-pane fade" id="tab-interventions" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">Program Intervensi Aktif</h3>
+                                                        </div>
+                                                        <div class="list-group list-group-flush">
+                                                            <div class="list-group-item">
+                                                                <div class="row align-items-center">
+                                                                    <div class="col text-truncate">
+                                                                        <strong>Program Mentoring Rakan Sebaya</strong>
+                                                                        <div class="text-muted">45 pelajar terlibat • Berjalan sejak Sept 2024</div>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <span class="badge bg-green">Aktif</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="list-group-item">
+                                                                <div class="row align-items-center">
+                                                                    <div class="col text-truncate">
+                                                                        <strong>Kelas Tambahan Matematik</strong>
+                                                                        <div class="text-muted">28 pelajar terlibat • Setiap Sabtu 9-12 PM</div>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <span class="badge bg-green">Aktif</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="list-group-item">
+                                                                <div class="row align-items-center">
+                                                                    <div class="col text-truncate">
+                                                                        <strong>Bimbingan Kaunseling</strong>
+                                                                        <div class="text-muted">18 pelajar terlibat • Sesi individu & kumpulan</div>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <span class="badge bg-blue">Berjadual</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-lg-6">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">Keberkesanan Intervensi</h3>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <div class="card card-sm">
+                                                                        <div class="card-body text-center">
+                                                                            <div class="h2 text-success">68%</div>
+                                                                            <div class="text-muted">Pelajar Bertambah Baik</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="card card-sm">
+                                                                        <div class="card-body text-center">
+                                                                            <div class="h2 text-primary">+15.3</div>
+                                                                            <div class="text-muted">Purata Peningkatan Skor</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mt-3">
+                                                                <div class="text-muted mb-2">Program Paling Berkesan:</div>
+                                                                <div class="progress-list">
+                                                                    <div class="progress-list-item">
+                                                                        <div class="progress-list-item-name">Mentoring Rakan</div>
+                                                                        <div class="progress-list-item-progress">
+                                                                            <div class="progress progress-sm">
+                                                                                <div class="progress-bar bg-success" style="width: 78%" role="progressbar"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="progress-list-item-label">78%</div>
+                                                                    </div>
+                                                                    <div class="progress-list-item">
+                                                                        <div class="progress-list-item-name">Kelas Tambahan</div>
+                                                                        <div class="progress-list-item-progress">
+                                                                            <div class="progress progress-sm">
+                                                                                <div class="progress-bar bg-blue" style="width: 65%" role="progressbar"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="progress-list-item-label">65%</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Tambah Rekod -->
+    <div class="modal modal-blur fade" id="modal-new-entry" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Rekod PDP Baru</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label class="form-label">No. Pelajar</label>
+                                <input type="text" class="form-control" placeholder="2024001234">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label class="form-label">Nama Pelajar</label>
+                                <input type="text" class="form-control" placeholder="Nama penuh pelajar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label class="form-label">Program</label>
+                                <select class="form-select">
+                                    <option>Pilih program...</option>
+                                    <option>Diploma Kejuruteraan Mekanikal</option>
+                                    <option>Diploma Teknologi Maklumat</option>
+                                    <option>Diploma Kejuruteraan Elektrikal</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label class="form-label">Semester</label>
+                                <select class="form-select">
+                                    <option>Semester 1</option>
+                                    <option>Semester 2</option>
+                                    <option>Semester 3</option>
+                                    <option>Semester 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label class="form-label">Kehadiran (%)</label>
+                                <input type="number" class="form-control" min="0" max="100" placeholder="85">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label class="form-label">Tugasan (%)</label>
+                                <input type="number" class="form-control" min="0" max="100" placeholder="78">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label class="form-label">Peperiksaan (%)</label>
+                                <input type="number" class="form-control" min="0" max="100" placeholder="72">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Catatan</label>
+                        <textarea class="form-control" rows="3" placeholder="Catatan tambahan tentang prestasi pelajar..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link link-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary ms-auto">Simpan Rekod</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Import Data -->
+    <div class="modal modal-blur fade" id="modal-bulk-update" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Import Data PDP</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Fail Excel</label>
+                        <input type="file" class="form-control" accept=".xlsx,.xls">
+                        <div class="form-hint">Format yang disokong: .xlsx, .xls</div>
+                    </div>
+                    <div class="alert alert-info">
+                        <h4 class="alert-title">Format Import</h4>
+                        <div class="text-muted">
+                            Pastikan fail Excel mengandungi lajur: <strong>No. Pelajar</strong>, <strong>Nama</strong>, <strong>Program</strong>, <strong>Semester</strong>, <strong>Kehadiran</strong>, <strong>Tugasan</strong>, <strong>Peperiksaan</strong>.
+                            <a href="#" class="alert-link">Muat turun template</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link link-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary ms-auto">Import Data</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+</body>
+</html>

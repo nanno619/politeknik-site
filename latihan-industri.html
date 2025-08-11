@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Latihan Industri - Sistem Pengurusan Politeknik</title>
+    <!-- CSS files -->
+    <link href="./dist/css/tabler.min.css?1692870487" rel="stylesheet"/>
+    <link href="./dist/css/tabler-flags.min.css?1692870487" rel="stylesheet"/>
+    <link href="./dist/css/tabler-payments.min.css?1692870487" rel="stylesheet"/>
+    <link href="./dist/css/tabler-vendors.min.css?1692870487" rel="stylesheet"/>
+    <link href="./dist/css/demo.min.css?1692870487" rel="stylesheet"/>
+    <link href="./assets/css/modern-style.css" rel="stylesheet"/>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --tblr-theme-primary: rgb(106, 77, 233);
+          --tblr-primary: rgb(106, 77, 233);
+        }
+      }
+    </style>
+  </head>
+  <body >
+    <script src="./dist/js/demo-theme.min.js?1692870487"></script>
+    <div class="page">
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-md d-print-none" >
+        <div class="container-xl">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+            <a href="index.html">
+              <img src="./static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+            </a>
+          </h1>
+          <div class="navbar-nav flex-row order-md-last">
+            <div class="nav-item d-none d-md-flex me-3">
+              <div class="btn-list">
+                <a href="index.html" class="btn">
+                  Dashboard
+                </a>
+              </div>
+            </div>
+            <div class="d-none d-md-flex">
+              <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></svg>
+              </a>
+              <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/></svg>
+              </a>
+              <div class="nav-item dropdown d-none d-md-flex me-3">
+                <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"/><path d="M9 17v1a3 3 0 0 0 6 0v-1"/></svg>
+                  <span class="badge bg-red"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-end dropdown-menu-card">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Notifikasi Terkini</h3>
+                    </div>
+                    <div class="list-group list-group-flush list-group-hoverable">
+                      <div class="list-group-item">
+                        <div class="row align-items-center">
+                          <div class="col-auto"><span class="status-dot status-dot-animated bg-red d-block"></span></div>
+                          <div class="col text-truncate">
+                            <a href="#" class="text-body d-block">Laporan LI perlu dikemaskini</a>
+                            <div class="d-block text-muted text-truncate mt-n1">
+                              Ahmad Zaki - ABC Technology
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <a href="#" class="list-group-item-actions">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"/></svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+                <span class="avatar avatar-sm" style="background-image: url('./static/avatars/000m.jpg')"></span>
+                <div class="d-none d-xl-block ps-2">
+                  <div>Admin</div>
+                  <div class="mt-1 small text-muted">Administrator</div>
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <a href="#" class="dropdown-item">Tetapan</a>
+                <a href="#" class="dropdown-item">Profil</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">Log Keluar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="page-wrapper">
+        <!-- Page header -->
+        <div class="page-header d-print-none">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <div class="page-pretitle">
+                  Sistem Pengurusan
+                </div>
+                <h2 class="page-title">
+                  Latihan Industri
+                </h2>
+              </div>
+              <div class="col-auto ms-auto d-print-none">
+                <div class="btn-list">
+                  <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-latihan">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14"/><path d="M5 12l14 0"/></svg>
+                    Tambah Penempatan
+                  </a>
+                  <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-latihan" aria-label="Tambah penempatan">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14"/><path d="M5 12l14 0"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Page body -->
+        <div class="page-body">
+          <div class="container-xl">
+            <div class="row row-deck row-cards">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs nav-fill" data-bs-toggle="tabs" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <a href="#tabs-latihan-1" class="nav-link active" data-bs-toggle="tab" role="tab" aria-selected="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 4l4 4l-4 4"/><path d="M10 8h10"/><path d="M8 20l-4 -4l4 -4"/><path d="M4 16h10"/></svg>
+                          Penempatan Aktif
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a href="#tabs-latihan-2" class="nav-link" data-bs-toggle="tab" role="tab" aria-selected="false">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 9.35 0l1.65 3.8"/><path d="M9 10l2 2l4 -4"/></svg>
+                          Syarikat Rakan Kongsi
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a href="#tabs-latihan-3" class="nav-link" data-bs-toggle="tab" role="tab" aria-selected="false">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"/><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"/><path d="M10 14l2 2l4 -4"/></svg>
+                          Penilaian & Laporan
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a href="#tabs-latihan-4" class="nav-link" data-bs-toggle="tab" role="tab" aria-selected="false">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>
+                          Jadual & Kalendar
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active show" id="tabs-latihan-1" role="tabpanel">
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <div class="card">
+                              <div class="card-header">
+                                <h3 class="card-title">Senarai Pelajar Latihan Industri</h3>
+                                <div class="card-actions">
+                                  <div class="input-icon">
+                                    <span class="input-icon-addon">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Cari pelajar..." aria-label="Cari pelajar">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="table-responsive">
+                                <table class="table card-table table-vcenter text-nowrap datatable">
+                                  <thead>
+                                    <tr>
+                                      <th>Pelajar</th>
+                                      <th>Program</th>
+                                      <th>Syarikat</th>
+                                      <th>Tempoh</th>
+                                      <th>Status</th>
+                                      <th>Tindakan</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class="d-flex py-1 align-items-center">
+                                          <span class="avatar me-2">AZ</span>
+                                          <div class="flex-fill">
+                                            <div class="font-weight-medium">Ahmad Zaki</div>
+                                            <div class="text-muted"><a href="#" class="text-reset">DKS220001</a></div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="text-muted">DKS</div>
+                                        <div>Kejuruteraan Perisian</div>
+                                      </td>
+                                      <td>
+                                        <div class="font-weight-medium">ABC Technology Sdn Bhd</div>
+                                        <div class="text-muted">Kuala Lumpur</div>
+                                      </td>
+                                      <td>6 bulan</td>
+                                      <td><span class="badge bg-green">Aktif</span></td>
+                                      <td>
+                                        <div class="btn-list flex-nowrap">
+                                          <a href="#" class="btn btn-white btn-sm">Lihat</a>
+                                          <div class="dropdown">
+                                            <button class="btn dropdown-toggle align-text-top btn-sm" data-bs-toggle="dropdown">
+                                              Tindakan
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                              <a class="dropdown-item" href="#">Laporan</a>
+                                              <a class="dropdown-item" href="#">Kemas Kini Status</a>
+                                              <a class="dropdown-item" href="#">Hubungi Penyelia</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="d-flex py-1 align-items-center">
+                                          <span class="avatar me-2">SS</span>
+                                          <div class="flex-fill">
+                                            <div class="font-weight-medium">Siti Salmah</div>
+                                            <div class="text-muted"><a href="#" class="text-reset">DKS220015</a></div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="text-muted">DKS</div>
+                                        <div>Kejuruteraan Perisian</div>
+                                      </td>
+                                      <td>
+                                        <div class="font-weight-medium">Tech Solutions Sdn Bhd</div>
+                                        <div class="text-muted">Selangor</div>
+                                      </td>
+                                      <td>6 bulan</td>
+                                      <td><span class="badge bg-green">Aktif</span></td>
+                                      <td>
+                                        <div class="btn-list flex-nowrap">
+                                          <a href="#" class="btn btn-white btn-sm">Lihat</a>
+                                          <div class="dropdown">
+                                            <button class="btn dropdown-toggle align-text-top btn-sm" data-bs-toggle="dropdown">
+                                              Tindakan
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                              <a class="dropdown-item" href="#">Laporan</a>
+                                              <a class="dropdown-item" href="#">Kemas Kini Status</a>
+                                              <a class="dropdown-item" href="#">Hubungi Penyelia</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="d-flex py-1 align-items-center">
+                                          <span class="avatar me-2">MI</span>
+                                          <div class="flex-fill">
+                                            <div class="font-weight-medium">Muhammad Iqbal</div>
+                                            <div class="text-muted"><a href="#" class="text-reset">DKE220008</a></div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="text-muted">DKE</div>
+                                        <div>Kejuruteraan Elektrik</div>
+                                      </td>
+                                      <td>
+                                        <div class="font-weight-medium">Power Engineering Sdn Bhd</div>
+                                        <div class="text-muted">Johor</div>
+                                      </td>
+                                      <td>6 bulan</td>
+                                      <td><span class="badge bg-yellow">Menunggu</span></td>
+                                      <td>
+                                        <div class="btn-list flex-nowrap">
+                                          <a href="#" class="btn btn-white btn-sm">Lihat</a>
+                                          <div class="dropdown">
+                                            <button class="btn dropdown-toggle align-text-top btn-sm" data-bs-toggle="dropdown">
+                                              Tindakan
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                              <a class="dropdown-item" href="#">Laporan</a>
+                                              <a class="dropdown-item" href="#">Kemas Kini Status</a>
+                                              <a class="dropdown-item" href="#">Hubungi Penyelia</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="row row-cards">
+                              <div class="col-12">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                      <div class="subheader">Pelajar LI Aktif</div>
+                                      <div class="ms-auto lh-1">
+                                        <div class="dropdown">
+                                          <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Semester ini</a>
+                                          <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item active" href="#">Semester ini</a>
+                                            <a class="dropdown-item" href="#">Semester lepas</a>
+                                            <a class="dropdown-item" href="#">Semua masa</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="d-flex align-items-baseline">
+                                      <div class="h1 mb-0 me-2">145</div>
+                                      <div class="me-auto">
+                                        <span class="text-green d-inline-flex align-items-center lh-1">
+                                          12%
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8"/><path d="M14 7l7 0l0 7"/></svg>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div id="chart-revenue-bg" class="chart-sm"></div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                      <div class="subheader">Status Penempatan</div>
+                                    </div>
+                                    <div class="h1 mb-3">92%</div>
+                                    <div class="d-flex mb-2">
+                                      <div>Berjaya Ditempatkan</div>
+                                      <div class="ms-auto">
+                                        <span class="text-nowrap text-muted">133 pelajar</span>
+                                      </div>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                      <div class="progress-bar bg-primary" style="width: 92%" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="92% Complete">
+                                        <span class="visually-hidden">92% Complete</span>
+                                      </div>
+                                    </div>
+                                    <div class="d-flex mb-2 mt-2">
+                                      <div>Mencari Penempatan</div>
+                                      <div class="ms-auto">
+                                        <span class="text-nowrap text-muted">12 pelajar</span>
+                                      </div>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                      <div class="progress-bar bg-warning" style="width: 8%" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" aria-label="8% Complete">
+                                        <span class="visually-hidden">8% Complete</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="tabs-latihan-2" role="tabpanel">
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <div class="card">
+                              <div class="card-header">
+                                <h3 class="card-title">Senarai Syarikat Rakan Kongsi</h3>
+                                <div class="card-actions">
+                                  <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-syarikat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14"/><path d="M5 12l14 0"/></svg>
+                                    Tambah Syarikat
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="table-responsive">
+                                <table class="table card-table table-vcenter text-nowrap">
+                                  <thead>
+                                    <tr>
+                                      <th>Syarikat</th>
+                                      <th>Industri</th>
+                                      <th>Lokasi</th>
+                                      <th>Kekosongan</th>
+                                      <th>Status</th>
+                                      <th>Tindakan</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class="d-flex py-1 align-items-center">
+                                          <div class="avatar me-2 bg-azure-lt">AT</div>
+                                          <div class="flex-fill">
+                                            <div class="font-weight-medium">ABC Technology Sdn Bhd</div>
+                                            <div class="text-muted">MOU 2024-2026</div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td>Teknologi Maklumat</td>
+                                      <td>Kuala Lumpur</td>
+                                      <td>
+                                        <span class="badge bg-green">8 tersedia</span>
+                                      </td>
+                                      <td><span class="badge bg-green">Aktif</span></td>
+                                      <td>
+                                        <div class="btn-list flex-nowrap">
+                                          <a href="#" class="btn btn-white btn-sm">Lihat</a>
+                                          <a href="#" class="btn btn-white btn-sm">Hubungi</a>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="d-flex py-1 align-items-center">
+                                          <div class="avatar me-2 bg-green-lt">TS</div>
+                                          <div class="flex-fill">
+                                            <div class="font-weight-medium">Tech Solutions Sdn Bhd</div>
+                                            <div class="text-muted">MOU 2023-2025</div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td>Perisian & Web</td>
+                                      <td>Selangor</td>
+                                      <td>
+                                        <span class="badge bg-green">5 tersedia</span>
+                                      </td>
+                                      <td><span class="badge bg-green">Aktif</span></td>
+                                      <td>
+                                        <div class="btn-list flex-nowrap">
+                                          <a href="#" class="btn btn-white btn-sm">Lihat</a>
+                                          <a href="#" class="btn btn-white btn-sm">Hubungi</a>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="d-flex py-1 align-items-center">
+                                          <div class="avatar me-2 bg-yellow-lt">PE</div>
+                                          <div class="flex-fill">
+                                            <div class="font-weight-medium">Power Engineering Sdn Bhd</div>
+                                            <div class="text-muted">MOU 2024-2027</div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td>Kejuruteraan Elektrik</td>
+                                      <td>Johor</td>
+                                      <td>
+                                        <span class="badge bg-yellow">2 tersedia</span>
+                                      </td>
+                                      <td><span class="badge bg-green">Aktif</span></td>
+                                      <td>
+                                        <div class="btn-list flex-nowrap">
+                                          <a href="#" class="btn btn-white btn-sm">Lihat</a>
+                                          <a href="#" class="btn btn-white btn-sm">Hubungi</a>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="d-flex py-1 align-items-center">
+                                          <div class="avatar me-2 bg-red-lt">ME</div>
+                                          <div class="flex-fill">
+                                            <div class="font-weight-medium">Mech Engineering Sdn Bhd</div>
+                                            <div class="text-muted">MOU 2023-2024</div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td>Kejuruteraan Mekanikal</td>
+                                      <td>Penang</td>
+                                      <td>
+                                        <span class="badge bg-red">Penuh</span>
+                                      </td>
+                                      <td><span class="badge bg-yellow">Semakan MOU</span></td>
+                                      <td>
+                                        <div class="btn-list flex-nowrap">
+                                          <a href="#" class="btn btn-white btn-sm">Lihat</a>
+                                          <a href="#" class="btn btn-white btn-sm">Hubungi</a>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="card">
+                              <div class="card-header">
+                                <h3 class="card-title">Ringkasan Syarikat</h3>
+                              </div>
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-6">
+                                    <div class="text-muted">Total Syarikat</div>
+                                    <div class="h2 mb-0">45</div>
+                                  </div>
+                                  <div class="col-6">
+                                    <div class="text-muted">Syarikat Aktif</div>
+                                    <div class="h2 mb-0">38</div>
+                                  </div>
+                                </div>
+                                <div class="row mt-3">
+                                  <div class="col-6">
+                                    <div class="text-muted">Kekosongan</div>
+                                    <div class="h2 mb-0">187</div>
+                                  </div>
+                                  <div class="col-6">
+                                    <div class="text-muted">Terisi</div>
+                                    <div class="h2 mb-0">133</div>
+                                  </div>
+                                </div>
+                                <div class="progress mt-3">
+                                  <div class="progress-bar bg-primary" style="width: 71%" role="progressbar" aria-valuenow="133" aria-valuemin="0" aria-valuemax="187">
+                                    <span class="visually-hidden">71% Terisi</span>
+                                  </div>
+                                </div>
+                                <div class="mt-2">
+                                  <small class="text-muted">71% kekosongan telah terisi</small>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mt-3">
+                              <div class="card-header">
+                                <h3 class="card-title">Industri Teratas</h3>
+                              </div>
+                              <div class="card-body">
+                                <div class="list-group list-group-transparent">
+                                  <div class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-primary me-3">15</span>
+                                    <div class="flex-fill">Teknologi Maklumat</div>
+                                    <div class="text-muted">33%</div>
+                                  </div>
+                                  <div class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-success me-3">8</span>
+                                    <div class="flex-fill">Kejuruteraan Elektrik</div>
+                                    <div class="text-muted">18%</div>
+                                  </div>
+                                  <div class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-info me-3">7</span>
+                                    <div class="flex-fill">Kejuruteraan Mekanikal</div>
+                                    <div class="text-muted">15%</div>
+                                  </div>
+                                  <div class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-warning me-3">6</span>
+                                    <div class="flex-fill">Perakaunan</div>
+                                    <div class="text-muted">13%</div>
+                                  </div>
+                                  <div class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-secondary me-3">9</span>
+                                    <div class="flex-fill">Lain-lain</div>
+                                    <div class="text-muted">21%</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="tabs-latihan-3" role="tabpanel">
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <div class="card">
+                              <div class="card-header">
+                                <h3 class="card-title">Penilaian Prestasi Pelajar</h3>
+                              </div>
+                              <div class="table-responsive">
+                                <table class="table card-table table-vcenter text-nowrap">
+                                  <thead>
+                                    <tr>
+                                      <th>Pelajar</th>
+                                      <th>Syarikat</th>
+                                      <th>Penyelia Industri</th>
+                                      <th>Markah</th>
+                                      <th>Status Laporan</th>
+                                      <th>Tindakan</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class="d-flex py-1 align-items-center">
+                                          <span class="avatar me-2">AZ</span>
+                                          <div class="flex-fill">
+                                            <div class="font-weight-medium">Ahmad Zaki</div>
+                                            <div class="text-muted">DKS220001</div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td>ABC Technology</td>
+                                      <td>Encik Rahman Ali</td>
+                                      <td>
+                                        <div class="text-green h4 mb-0">85</div>
+                                        <div class="text-muted">A</div>
+                                      </td>
+                                      <td><span class="badge bg-green">Siap</span></td>
+                                      <td>
+                                        <a href="#" class="btn btn-white btn-sm">Lihat</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="d-flex py-1 align-items-center">
+                                          <span class="avatar me-2">SS</span>
+                                          <div class="flex-fill">
+                                            <div class="font-weight-medium">Siti Salmah</div>
+                                            <div class="text-muted">DKS220015</div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td>Tech Solutions</td>
+                                      <td>Puan Norliza Ahmad</td>
+                                      <td>
+                                        <div class="text-green h4 mb-0">78</div>
+                                        <div class="text-muted">B+</div>
+                                      </td>
+                                      <td><span class="badge bg-yellow">Dalam Semakan</span></td>
+                                      <td>
+                                        <a href="#" class="btn btn-white btn-sm">Lihat</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="d-flex py-1 align-items-center">
+                                          <span class="avatar me-2">MI</span>
+                                          <div class="flex-fill">
+                                            <div class="font-weight-medium">Muhammad Iqbal</div>
+                                            <div class="text-muted">DKE220008</div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td>Power Engineering</td>
+                                      <td>Encik Azlan Hashim</td>
+                                      <td>
+                                        <div class="text-muted h4 mb-0">-</div>
+                                        <div class="text-muted">Belum Dinilai</div>
+                                      </td>
+                                      <td><span class="badge bg-red">Tertunggak</span></td>
+                                      <td>
+                                        <a href="#" class="btn btn-white btn-sm">Ingatkan</a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="card">
+                              <div class="card-header">
+                                <h3 class="card-title">Prestasi Keseluruhan</h3>
+                              </div>
+                              <div class="card-body">
+                                <div class="text-center">
+                                  <div class="h1 text-primary">82.5</div>
+                                  <div class="text-muted">Purata Markah</div>
+                                </div>
+                                <div class="mt-3">
+                                  <div class="row">
+                                    <div class="col text-center">
+                                      <div class="h3 text-green">A</div>
+                                      <div class="text-muted">15%</div>
+                                    </div>
+                                    <div class="col text-center">
+                                      <div class="h3 text-blue">B</div>
+                                      <div class="text-muted">45%</div>
+                                    </div>
+                                    <div class="col text-center">
+                                      <div class="h3 text-yellow">C</div>
+                                      <div class="text-muted">35%</div>
+                                    </div>
+                                    <div class="col text-center">
+                                      <div class="h3 text-red">F</div>
+                                      <div class="text-muted">5%</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mt-3">
+                              <div class="card-header">
+                                <h3 class="card-title">Status Laporan</h3>
+                              </div>
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-6">
+                                    <div class="text-muted">Siap</div>
+                                    <div class="h2 mb-0">98</div>
+                                  </div>
+                                  <div class="col-6">
+                                    <div class="text-muted">Tertunggak</div>
+                                    <div class="h2 mb-0">12</div>
+                                  </div>
+                                </div>
+                                <div class="progress mt-3">
+                                  <div class="progress-bar bg-success" style="width: 89%" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="visually-hidden">89% Siap</span>
+                                  </div>
+                                </div>
+                                <div class="mt-2">
+                                  <small class="text-muted">89% laporan telah siap</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="tabs-latihan-4" role="tabpanel">
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <div class="card">
+                              <div class="card-header">
+                                <h3 class="card-title">Kalendar Latihan Industri</h3>
+                                <div class="card-actions">
+                                  <div class="btn-list">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/></svg>
+                                      Hari
+                                    </a>
+                                    <a href="#" class="btn btn-primary btn-sm">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M7 14h.01"/><path d="M10.01 14h.01"/></svg>
+                                      Bulan
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <div class="table-responsive">
+                                  <table class="table table-borderless">
+                                    <thead>
+                                      <tr class="text-muted">
+                                        <th>Isnin</th>
+                                        <th>Selasa</th>
+                                        <th>Rabu</th>
+                                        <th>Khamis</th>
+                                        <th>Jumaat</th>
+                                        <th>Sabtu</th>
+                                        <th>Ahad</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="text-muted">26</td>
+                                        <td class="text-muted">27</td>
+                                        <td class="text-muted">28</td>
+                                        <td class="text-muted">29</td>
+                                        <td class="text-muted">30</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                      </tr>
+                                      <tr>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td>
+                                          13
+                                          <div class="badge bg-blue">Lawatan</div>
+                                        </td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                      </tr>
+                                      <tr>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>
+                                          20
+                                          <div class="badge bg-green">Pembentangan</div>
+                                        </td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                      </tr>
+                                      <tr>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="card">
+                              <div class="card-header">
+                                <h3 class="card-title">Acara Akan Datang</h3>
+                              </div>
+                              <div class="card-body">
+                                <div class="list-group list-group-transparent">
+                                  <div class="list-group-item">
+                                    <div class="row align-items-center">
+                                      <div class="col-auto">
+                                        <span class="status-dot status-dot-animated bg-blue d-block"></span>
+                                      </div>
+                                      <div class="col text-truncate">
+                                        <div class="text-reset d-block">Lawatan Penyelia ke ABC Tech</div>
+                                        <div class="d-block text-muted text-truncate mt-n1">
+                                          13 Dis 2024 - 10:00 AM
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="list-group-item">
+                                    <div class="row align-items-center">
+                                      <div class="col-auto">
+                                        <span class="status-dot status-dot-animated bg-green d-block"></span>
+                                      </div>
+                                      <div class="col text-truncate">
+                                        <div class="text-reset d-block">Pembentangan Projek LI</div>
+                                        <div class="d-block text-muted text-truncate mt-n1">
+                                          20 Dis 2024 - 2:00 PM
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="list-group-item">
+                                    <div class="row align-items-center">
+                                      <div class="col-auto">
+                                        <span class="status-dot status-dot-animated bg-yellow d-block"></span>
+                                      </div>
+                                      <div class="col text-truncate">
+                                        <div class="text-reset d-block">Mesyuarat Panel LI</div>
+                                        <div class="d-block text-muted text-truncate mt-n1">
+                                          27 Dis 2024 - 9:00 AM
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mt-3">
+                              <div class="card-header">
+                                <h3 class="card-title">Tempoh Latihan</h3>
+                              </div>
+                              <div class="card-body">
+                                <div class="text-center">
+                                  <div class="text-muted">Tempoh Standard</div>
+                                  <div class="h2 text-primary">6 Bulan</div>
+                                </div>
+                                <div class="mt-3">
+                                  <div class="row text-center">
+                                    <div class="col">
+                                      <div class="h4">Jan - Jun</div>
+                                      <div class="text-muted">Sem 1</div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="h4">Jul - Dis</div>
+                                      <div class="text-muted">Sem 2</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal Tambah Penempatan -->
+    <div class="modal modal-blur fade" id="modal-latihan" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tambah Penempatan Latihan Industri</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Pelajar</label>
+                    <select class="form-select">
+                      <option>Pilih pelajar</option>
+                      <option>Ahmad Zaki - DKS220001</option>
+                      <option>Siti Salmah - DKS220015</option>
+                      <option>Muhammad Iqbal - DKE220008</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Syarikat</label>
+                    <select class="form-select">
+                      <option>Pilih syarikat</option>
+                      <option>ABC Technology Sdn Bhd</option>
+                      <option>Tech Solutions Sdn Bhd</option>
+                      <option>Power Engineering Sdn Bhd</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Tarikh Mula</label>
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Tarikh Tamat</label>
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Penyelia Industri</label>
+                    <input type="text" class="form-control" placeholder="Nama penyelia dari syarikat">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Elaun Bulanan (RM)</label>
+                    <input type="number" class="form-control" placeholder="500" min="0">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Penyelia Politeknik</label>
+                    <select class="form-select">
+                      <option>Pilih penyelia</option>
+                      <option>Dr. Ahmad Rahman</option>
+                      <option>Ustazah Norliza</option>
+                      <option>En. Azlan Hashim</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Status</label>
+                    <select class="form-select">
+                      <option value="aktif">Aktif</option>
+                      <option value="menunggu">Menunggu</option>
+                      <option value="selesai">Selesai</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Deskripsi Kerja</label>
+                <textarea class="form-control" rows="3" placeholder="Deskripsi tugasan dan tanggungjawab pelajar..."></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+              Batal
+            </a>
+            <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14"/><path d="M5 12l14 0"/></svg>
+              Tambah Penempatan
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Tambah Syarikat -->
+    <div class="modal modal-blur fade" id="modal-syarikat" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tambah Syarikat Rakan Kongsi</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Nama Syarikat</label>
+                    <input type="text" class="form-control" placeholder="Nama syarikat penuh">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Industri</label>
+                    <select class="form-select">
+                      <option>Pilih industri</option>
+                      <option>Teknologi Maklumat</option>
+                      <option>Kejuruteraan Elektrik</option>
+                      <option>Kejuruteraan Mekanikal</option>
+                      <option>Perakaunan & Kewangan</option>
+                      <option>Lain-lain</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Alamat</label>
+                    <textarea class="form-control" rows="2" placeholder="Alamat syarikat"></textarea>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Negeri</label>
+                    <select class="form-select">
+                      <option>Pilih negeri</option>
+                      <option>Kuala Lumpur</option>
+                      <option>Selangor</option>
+                      <option>Johor</option>
+                      <option>Penang</option>
+                      <option>Perak</option>
+                      <option>Lain-lain</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Person Hubungan</label>
+                    <input type="text" class="form-control" placeholder="Nama person yang bertanggungjawab">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Telefon</label>
+                    <input type="tel" class="form-control" placeholder="03-12345678">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="hr@company.com">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Bilangan Kekosongan</label>
+                    <input type="number" class="form-control" placeholder="5" min="1">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Tarikh MOU Mula</label>
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Tarikh MOU Tamat</label>
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+              Batal
+            </a>
+            <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14"/><path d="M5 12l14 0"/></svg>
+              Tambah Syarikat
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Libs JS -->
+    <!-- Tabler Core -->
+    <script src="./dist/js/tabler.min.js?1692870487" defer></script>
+    <script src="./dist/js/demo.min.js?1692870487" defer></script>
+  </body>
+</html>
